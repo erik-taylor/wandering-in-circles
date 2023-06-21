@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgFor } from "@angular/common";
+import { NgFor, NgOptimizedImage } from "@angular/common";
 
 @Component({
   standalone: true,
   selector: 'app-image-gallery',
-  imports: [NgFor],
+  imports: [NgFor, NgOptimizedImage],
   templateUrl: './image-gallery.component.html',
   styleUrls: ['./image-gallery.component.scss']
 })
