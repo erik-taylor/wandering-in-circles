@@ -296,7 +296,7 @@ export class ImageGalleryComponent implements OnInit {
     {url: 'assets/images/0290.jpg', title: "Snowcap mountains behind a lake bend"}
   ]
 
-  tagUrl = 'http://res.cloudinary.com/de1d1dq0v/image/list/wandering.json';
+  tagUrl = 'https://res.cloudinary.com/de1d1dq0v/image/list/wandering.json';
   exampleUrl = 'https://res.cloudinary.com/de1d1dq0v/image/upload/v1688088193/053_i2limy.jpg';
 
   newImgArr: string[] = [];
