@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Rock+Salt&display=swap');
+
+//  BRAND VARS
+$logo-blue: rgb(51, 131, 222);
+
+
+//  BRAND FONTS
+.rock-salt {
+    font-family: 'Rock Salt', cursive;
+}
+
+p, span, ul, ol, a, button {
+    font-family: 'Mulish', sans-serif;
+}

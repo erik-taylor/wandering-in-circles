@@ -1,7 +1,3 @@
-h1 {
-    color: blue;
-}
-
 .grid-container {
     padding: 0;
     column-count: 1;
@@ -29,4 +25,13 @@ h1 {
         margin: 0;
         break-inside: avoid;
     }
+}
+
+.btn-shuffle {
+    color: rgb(51, 131, 222);
+    padding: 1rem;
+    border: 2px solid rgb(51, 131, 222);
+    border-radius: 3px;
+    text-transform: uppercase;
+    //background-color: #cccccc;
 }
