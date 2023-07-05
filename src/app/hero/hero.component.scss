@@ -16,5 +16,14 @@ a {
         color: $logo-blue;
         margin: 0;
         padding: 0;
+        font-size: 1rem;
+
+        @media (min-width: $md-screen) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: $lg-screen) {
+            font-size: 2rem;
+        }
     }
 }
