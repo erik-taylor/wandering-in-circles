@@ -1,8 +1,8 @@
 <button (click)="shuffleImages()" class="btn-shuffle">Shuffle Images</button>
-
+<!-- <button (click)="fetchImages()" class="btn-shuffle">Fetch Images</button> -->
 <div class="grid-container">
     <img 
-        *ngFor="let img of newImgArr" 
+        *ngFor="let img of newImgArr.slice(0, 25)" 
         [ngSrc]="img"
         width="400" 
         height="600"  
@@ -11,3 +11,4 @@
         loading="lazy"
     />
 </div>
+<div id="scroll-observer"></div>
