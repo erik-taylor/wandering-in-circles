@@ -26,6 +26,10 @@
     }
 }
 
+.shuffle-wrapper {
+    text-align: center;
+}
+
 .btn-shuffle {
     color: rgb(51, 131, 222);
     padding: 1rem;
@@ -33,7 +37,6 @@
     border-radius: 3px;
     text-transform: uppercase;
     cursor: pointer;
-    margin: 0 auto;
     
     &:hover {
         transform: scale(1.1);
