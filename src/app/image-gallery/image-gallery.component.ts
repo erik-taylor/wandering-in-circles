@@ -21,8 +21,7 @@ export class ImageGalleryComponent implements OnInit {
     //console.log(randomizedImages);
   }
 
-  ngOnInit(): void {
-
+  fetchImages = () => {
     fetch('https://res.cloudinary.com/wanderingincircles/image/list/wandering.json')
       .then((res) => res.json())
       .then((data) => {
@@ -34,6 +33,10 @@ export class ImageGalleryComponent implements OnInit {
       })
       .catch((error) => console.error(error))
       .finally(() => this.shuffleImages());
+  }
+
+  ngOnInit(): void {
+    this.fetchImages();
   }
 
   
