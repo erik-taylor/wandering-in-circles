@@ -15,4 +15,21 @@ p, span, ul, ol, a, button {
 
 $sm-screen: 480px;
 $md-screen: 768px;
-$lg-screen: 1920px;
+$lg-screen: 1024px;
+$xl-screen: 1920px;
+
+// @media (min-width: 768px) {
+//     column-count: 2;
+// }
+
+// @media (min-width: 1024px) {
+//     column-count: 3;
+// }
+
+// @media (min-width: 1440px) {
+//     column-count: 5;
+// }
+
+// @media (min-width: 2000px) {
+//     column-count: 6;
+// }
