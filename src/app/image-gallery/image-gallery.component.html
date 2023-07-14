@@ -1,7 +1,3 @@
-<div class="shuffle-wrapper">
-    <button (click)="shuffleImages()" class="btn-shuffle">Shuffle Images</button>
-</div>
-<!-- <button (click)="fetchImages()" class="btn-shuffle">Fetch Images</button> -->
 <div class="grid-container">
     <img 
         *ngFor="let img of newImgArr" 
@@ -13,7 +9,9 @@
         loading="lazy"
     />
 </div>
-<div id="scroll-observer"></div>
-<!-- <div class="shuffle-wrapper">
-    <button (click)="shuffleImages()" class="btn-shuffle">Shuffle Images</button>
-</div> -->
+<div class="shuffle-wrapper">
+    <button (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button>
+</div>
+<div id="error-message" class="rock-salt" *ngIf="imageFetchError">
+    <h1>OH NOES... Failed to load any images... Have you tried reloading?</h1>
+</div>
