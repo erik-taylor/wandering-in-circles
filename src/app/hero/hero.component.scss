@@ -48,7 +48,7 @@ a {
 
 .hero-text-wrapper {
     p {
-        @media (min-width: $xl-screen) {
+        @media (min-width: $md-screen) {
             font-size: 1.3rem;
         }
 
