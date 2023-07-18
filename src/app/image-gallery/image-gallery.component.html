@@ -1,6 +1,6 @@
 <div class="grid-container">
     <img 
-        *ngFor="let img of newImgArr" 
+        *ngFor="let img of newImgArr.slice(0, 10)" 
         [ngSrc]="img"
         width="400" 
         height="600"  
