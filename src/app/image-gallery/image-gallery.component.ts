@@ -10,16 +10,20 @@ import { NgFor, NgIf, NgOptimizedImage } from "@angular/common";
 })
 export class ImageGalleryComponent implements OnInit {
 
-  tagUrl = 'https://res.cloudinary.com/wanderingincircles/image/list/wandering.json';
-  exampleUrl = 'https://res.cloudinary.com/wanderingincircles/image/upload/v1688088193/053_i2limy.jpg';
-
   newImgArr: string[] = [];
   imageFetchError: boolean = false;
+  currentPage = 1;
+  totalPages = 20;
 
 
-  shuffleImages = () => {
+  shuffleImages = (): object => {
     let randomizedImages = this.newImgArr.sort((a,b) => 0.5 - Math.random());
     return randomizedImages;
+  }
+
+  onPageChange = (page?: number): void => {
+    page ?? this.currentPage;
+    this.fetchImages();
   }
 
   fetchImages = () => {
@@ -33,7 +37,10 @@ export class ImageGalleryComponent implements OnInit {
             this.newImgArr.push(imgUrl);        
           });
         })
-        .catch((error) => console.error(error))
+        .catch((error) => {
+          this.imageFetchError = true;
+          console.error(error);
+        })
         .finally(() => {
           this.imageFetchError = false;
           this.shuffleImages();
@@ -45,7 +52,7 @@ export class ImageGalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.fetchImages();
+    this.onPageChange();
   }
 
   
