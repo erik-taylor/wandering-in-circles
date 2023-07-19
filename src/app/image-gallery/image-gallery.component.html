@@ -5,7 +5,7 @@
 </div>
 <div class="grid-container">
     <img 
-        *ngFor="let img of newImgArr | paginate: {itemsPerPage: 10, currentPage: p}" 
+        *ngFor="let img of newImgArr | paginate: {itemsPerPage: 20, currentPage: p}" 
         [ngSrc]="img"
         width="400" 
         height="600"  
