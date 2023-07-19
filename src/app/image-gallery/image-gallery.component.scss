@@ -3,7 +3,6 @@
 .grid-container {
     padding: 0;
     column-count: 1;
-    margin-top: 2rem;
 
     @media (min-width: $md-screen) {
         column-count: 2;
@@ -31,9 +30,9 @@
 }
 
 .btn-shuffle {
-    color: rgb(51, 131, 222);
+    color: $logo-blue;
     padding: 1rem;
-    border: 2px solid rgb(51, 131, 222);
+    border: 2px solid $logo-blue;
     border-radius: 3px;
     text-transform: uppercase;
     cursor: pointer;
@@ -47,3 +46,13 @@
     text-align: center;
     color: $logo-blue;
 }
+
+.my-pagination ::ng-deep .ngx-pagination {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: $logo-blue;
+    border-radius: 2px;
+  }
