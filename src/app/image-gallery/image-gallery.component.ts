@@ -38,7 +38,7 @@ export class ImageGalleryComponent implements OnInit {
         })
         .finally(() => {
           this.imageFetchError = false;
-          //this.shuffleImages();
+          this.shuffleImages();
         });  
     } catch (error) {
       console.error(`dun f*ckd up that http response`);
