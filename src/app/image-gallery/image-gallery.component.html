@@ -1,23 +1,26 @@
 
-<div class="shuffle-wrapper">
-    <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
-    <!-- <button (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
+
+<div *ngIf="newImgArr.length > 0">
+    <div class="shuffle-wrapper">
+        <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+        <!-- <button type="button" (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
+    </div>
+    <div class="grid-container">
+        <img 
+            *ngFor="let img of newImgArr | paginate: {itemsPerPage: 20, currentPage: p}" 
+            [ngSrc]="img"
+            width="400" 
+            height="600"  
+            [alt]="img" 
+            class="image" 
+            loading="lazy"
+        />
+    </div>
+    <div class="shuffle-wrapper">
+        <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+        <!-- <button type="button" (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
+    </div>
 </div>
-<div class="grid-container">
-    <img 
-        *ngFor="let img of newImgArr | paginate: {itemsPerPage: 20, currentPage: p}" 
-        [ngSrc]="img"
-        width="400" 
-        height="600"  
-        [alt]="img" 
-        class="image" 
-        loading="lazy"
-    />
-</div>
-<div class="shuffle-wrapper">
-    <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
-    <!-- <button (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
-</div>
-<div id="error-message" class="rock-salt" *ngIf="imageFetchError">
+<div id="error-message" class="rock-salt" *ngIf="imageFetchError || newImgArr.length === 0">
     <h1>OH NOES... Failed to load any images... Have you tried reloading?</h1>
 </div>
