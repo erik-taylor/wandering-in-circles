@@ -48,13 +48,15 @@ div.hero-logo-wrapper {
 }
 
 .hero-text-wrapper {
-    p {
-        @media (min-width: $md-screen) {
-            font-size: 1.3rem;
-        }
+    margin: 0 auto;
 
-        @media (min-width: $xl-screen) {
-            font-size: 1.75rem;
+    @media (min-width: $xxl-screen) {
+        max-width: 80vw;
+    }
+    
+    p {
+        @media (min-width: $xxl-screen) {
+            font-size: 2rem;
         }
     }
 }
