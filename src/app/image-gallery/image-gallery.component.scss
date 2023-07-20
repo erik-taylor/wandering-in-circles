@@ -47,17 +47,21 @@
     color: $logo-blue;
 }
 
-.my-pagination ::ng-deep .ngx-pagination {
+.pagination ::ng-deep .ngx-pagination {
     padding: 0;
     margin: 1rem 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
 
     @media (min-width: $xxl-screen) {
         font-size: 1.75rem;
     }
+
+    @media (min-width: $xxxl-screen) {
+        font-size: 5rem;
+    }
 }
 
-.my-pagination ::ng-deep .ngx-pagination {
+.pagination ::ng-deep .ngx-pagination {
     .current {
         background: $logo-blue;
         border-radius: 2px;
