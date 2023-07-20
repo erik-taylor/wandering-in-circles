@@ -57,7 +57,9 @@
     }
 }
 
-.my-pagination ::ng-deep .ngx-pagination .current {
-    background: $logo-blue;
-    border-radius: 2px;
-  }
+.my-pagination ::ng-deep .ngx-pagination {
+    .current {
+        background: $logo-blue;
+        border-radius: 2px;
+      }
+}
