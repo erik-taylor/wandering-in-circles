@@ -62,8 +62,17 @@
 }
 
 .pagination ::ng-deep .ngx-pagination {
+    padding: 0;
     .current {
         background: $logo-blue;
         border-radius: 2px;
+      }
+
+      a {
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid $logo-blue;
+            border-radius: 2px;
+        }
       }
 }

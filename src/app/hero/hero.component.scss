@@ -14,16 +14,6 @@ div.hero-logo-wrapper {
             width: 40px;
             height: 40px;
             margin-left: 1rem;
-    
-            @media (min-width: $md-screen) {
-                width: 65px;
-                height: 65px;
-            }
-    
-            @media (min-width: $md-screen) {
-                width: 75px;
-                height: 75px;
-            }
         }
     
         h1.logo-title {
