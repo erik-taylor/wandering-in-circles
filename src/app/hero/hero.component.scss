@@ -41,8 +41,9 @@ div.hero-logo-wrapper {
     }
     
     p {
+        font-size: 1rem;
         @media (min-width: $xl-screen) {
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
     }
 }
