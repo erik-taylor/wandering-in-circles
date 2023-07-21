@@ -27,6 +27,11 @@
 
 .shuffle-wrapper {
     text-align: center;
+    margin: 0.75rem 0;
+
+    @media (min-width: $xl-screen) {
+        margin: 2rem;
+    }
 }
 
 .btn-shuffle {
