@@ -9,11 +9,19 @@
     }
 
     @media (min-width: $lg-screen) {
-        column-count: 3;
+        column-count: 4;
     }
 
     @media (min-width: $xl-screen) {
         column-count: 5;
+    }
+
+    @media (min-width: $xxl-screen) {
+        column-count: 6;
+    }
+
+    @media (min-width: $xxxl-screen) {
+        column-count: 7;
     }
 
     .image {
