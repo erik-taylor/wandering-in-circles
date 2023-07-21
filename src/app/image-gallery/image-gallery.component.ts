@@ -21,41 +21,22 @@ export class ImageGalleryComponent implements OnInit {
     return randomizedImages;
   }
 
-  // fetchImages = () => {
-  //   try {
-  //     fetch('https://res.cloudinary.com/wanderingincircles/image/list/wandering.json')
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         data.resources.forEach((img: any) => {
-  //           let {public_id, version, format} = img;
-  //           let imgUrl = `https://res.cloudinary.com/wanderingincircles/image/upload/c_scale,w_700/f_auto/q_auto/v${version}/${public_id}.${format}`;
-  //           this.newImgArr.push(imgUrl);        
-  //         });
-  //       })
-  //       .catch((error) => {
-  //         this.imageFetchError = true;
-  //         console.error(error);
-  //       })
-  //       .finally(() => {
-  //         this.imageFetchError = false;
-  //         //this.shuffleImages();
-  //       });  
-  //   } catch (error) {
-  //     console.error(`dun f*ckd up that http response`);
-  //     this.imageFetchError = true;
-  //   }
-  // }
+  reverseImages = (): object => {
+    let reversedArr = this.newImgArr.reverse();
+    return reversedArr;
+  }
 
   fetchImages = async() => {
     let res = await fetch('https://res.cloudinary.com/wanderingincircles/image/list/wandering.json');
     if(res.ok) {
       let data = await res.json();
-      data.resources.forEach((img: any) => {
+      let resources = await data.resources;
+      resources.forEach((img: any) => {
         let {public_id, version, format} = img;
         let imgUrl = `https://res.cloudinary.com/wanderingincircles/image/upload/c_scale,w_700/f_auto/q_auto/v${version}/${public_id}.${format}`;
-        this.newImgArr.push(imgUrl);      
-        this.imageFetchError = false;
+        this.newImgArr.push(imgUrl);
         this.shuffleImages();  
+        //this.reverseImages();  
       });
     } else {
       console.error(`dun f*ckd up that http response`);
