@@ -54,6 +54,7 @@ export class ImageGalleryComponent implements OnInit {
         let {public_id, version, format} = img;
         let imgUrl = `https://res.cloudinary.com/wanderingincircles/image/upload/c_scale,w_700/f_auto/q_auto/v${version}/${public_id}.${format}`;
         this.newImgArr.push(imgUrl);      
+        this.imageFetchError = false;
         this.shuffleImages();  
       });
     } else {
