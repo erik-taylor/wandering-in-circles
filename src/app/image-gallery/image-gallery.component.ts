@@ -13,7 +13,7 @@ export class ImageGalleryComponent implements OnInit {
 
   newImgArr: string[] = [];
   imageFetchError: boolean = false;
-  p: number = 1;
+  page: number = 1;
 
 
   shuffleImages = (): object => {
