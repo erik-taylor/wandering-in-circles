@@ -21,6 +21,6 @@
         <!-- <button type="button" (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
     </div>
 </div>
-<div id="error-message" class="rock-salt" *ngIf="imageFetchError || newImgArr.length === 0">
+<div id="error-message" class="rock-salt" *ngIf="imageFetchError">
     <h1>OH NOES... Failed to load any images... Have you tried reloading?</h1>
 </div>
