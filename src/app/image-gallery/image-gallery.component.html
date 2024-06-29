@@ -7,10 +7,10 @@
     </div>
     <div class="grid-container">
         <img 
-            *ngFor="let img of newImgArr | paginate: {itemsPerPage: 30, currentPage: page}" 
+            *ngFor="let img of newImgArr | paginate: {itemsPerPage: 40, currentPage: page}" 
             [ngSrc]="img"
-            width="400" 
-            height="600"  
+            width="500" 
+            height="700"  
             [alt]="img" 
             class="image" 
             loading="lazy"
@@ -21,6 +21,6 @@
         <!-- <button type="button" (click)="shuffleImages()" class="btn-shuffle" *ngIf="!imageFetchError">Shuffle Images</button> -->
     </div>
 </div>
-<div id="error-message" class="rock-salt" *ngIf="imageFetchError || newImgArr.length === 0">
+<div id="error-message" class="rock-salt" *ngIf="imageFetchError">
     <h1>OH NOES... Failed to load any images... Have you tried reloading?</h1>
 </div>
