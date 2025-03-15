@@ -21,7 +21,11 @@
 
 .title-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 769px) {
+    flex-direction: row;
+  }
   h1 {
     margin: 15px;
       font-family: "countryside", sans-serif;
