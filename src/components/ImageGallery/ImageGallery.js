@@ -39,16 +39,15 @@ const ImageGallery = () => {
   return (
     <div className="image-gallery">
       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
-        <Masonry gutter="10px">
+        <Masonry>
           {images.map((image) => (
             <div key={image.asset_id} className="image-item">
               <img
                 src={`${cloudinaryBaseUrl}fl_lossy,q_auto/f_auto/${image.public_id}.${image.format}`}
-                alt={`Image ${image.public_id}`}
+                alt={`${image.public_id}`}
                 style={{width: "100%", display: "block"}}
                 loading="lazy"
               />
-              {/* <p>Created at: {new Date(image.created_at).toLocaleString()}</p> */}
             </div>
           ))}
         </Masonry>

@@ -1,4 +1,5 @@
 .image-gallery {
     width: 95vw;
+    max-width: 2000px;
     overflow: hidden;
 }
