@@ -1,33 +1,4 @@
 @font-face {
-  font-family: "senja";
-  src: url("./fonts/senja.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "malibu";
-  src: url("./fonts/malibu.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "tavel";
-  src: url("./fonts/travel.otf") format("opentype"),
-       url("./fonts/travel.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "streetwear";
-  src: url("./fonts/streetwear.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "countryside";
   src: url("./fonts/countryside.ttf") format("truetype");
   font-weight: normal;
