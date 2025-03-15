@@ -38,7 +38,7 @@ const ImageGallery = () => {
 
   return (
     <div className="image-gallery">
-      <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+      <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3, 1200: 4, 2000: 6}}>
         <Masonry>
           {images.map((image) => (
             <div key={image.asset_id} className="image-item">
