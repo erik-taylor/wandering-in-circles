@@ -6,10 +6,6 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="title-wrapper">
-          <h1 className="senja">Wandering In Circles</h1>
-          <h1 className="malibu">Wandering In Circles</h1>
-          <h1 className="tavel">Wandering In Circles</h1>
-          <h1 className="streetwear">Wandering In Circles</h1>
           <h1 className="countryside">Wandering In Circles</h1>
           <img src="airstream.jpg" className="app-logo" alt="wandering in circles airstream logo" style={{width: '175px', height: 'auto'}} />
         </div>
