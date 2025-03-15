@@ -1,3 +1,39 @@
+@font-face {
+  font-family: "senja";
+  src: url("./fonts/senja.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "malibu";
+  src: url("./fonts/malibu.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "tavel";
+  src: url("./fonts/travel.otf") format("opentype"),
+       url("./fonts/travel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "streetwear";
+  src: url("./fonts/streetwear.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "countryside";
+  src: url("./fonts/countryside.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .app {
   text-align: center;
 }
@@ -10,14 +46,29 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
 }
 
 .title-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   h1 {
     margin: 15px;
+    &.senja {
+      font-family: "senja", sans-serif;
+    }
+    &.malibu {
+      font-family: "malibu", sans-serif;
+    }
+    &.tavel {
+      font-family: "tavel", sans-serif;
+    }
+    &.streetwear {
+      font-family: "streetwear", sans-serif;
+    }
+    &.countryside {
+      font-family: "countryside", sans-serif;
+    }
   }
   .app-logo {
     width: 40px;
