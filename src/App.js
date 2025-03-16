@@ -7,11 +7,15 @@ function App() {
       <header className="app-header">
         <div className="title-wrapper">
           <h1 className="countryside">Wandering In Circles</h1>
-          <img src="airstream.jpg" className="app-logo" alt="wandering in circles airstream logo" style={{width: '175px', height: 'auto'}} />
+          <img src="caravan.svg" className="caravan-logo" alt="airstream caravan logo" style={{width: '175px', height: 'auto'}} />
         </div>
         <p className="intro-text">From picturesque campsites in national parks to vibrant festivals and charming towns, traveling in an Airstream allows you to immerse yourself in the beauty of diverse landscapes while enjoying the convenience of a well-appointed and stylish mobile abode.</p>        
-      <ImageGallery/>
+      
       </header>
+        <ImageGallery/>
+      <footer>
+      <a href="https://www.flaticon.com/free-animated-icons/caravan" title="caravan animated icons">Caravan animated icons created by Freepik - Flaticon</a>
+      </footer>
     </div>
   );
 }
