@@ -43,7 +43,7 @@ const ImageGallery = () => {
           {images.map((image) => (
             <div key={image.asset_id} className="image-item">
               <img
-                src={`${cloudinaryBaseUrl}fl_lossy,q_auto/f_auto/${image.public_id}.${image.format}`}
+                src={`${cloudinaryBaseUrl}fl_lossy,q_auto/c_scale,w_700/f_auto/${image.public_id}.${image.format}`}
                 alt={`${image.public_id}`}
                 style={{width: "100%", display: "block"}}
                 loading="lazy"
